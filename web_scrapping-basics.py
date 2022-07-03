@@ -31,3 +31,6 @@ comment = soup.b.string
 
 #view the comment type
 print(comment)
+
+#view tag attributes
+print(tag.attrs)
