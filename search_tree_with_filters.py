@@ -14,3 +14,6 @@ print(soup.find('p'))
 
 #search the document using the find method for ID
 print(soup.find(id = 'h1'))
+
+#search using string only
+print(soup.find(id = 'h1').string)
