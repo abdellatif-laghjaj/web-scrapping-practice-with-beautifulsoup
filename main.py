@@ -18,3 +18,6 @@ soup = BeautifulSoup(html_doc, 'html.parser')
 
 #view the soup type
 print(type(soup))
+
+#create a tag object
+tag = soup.title
