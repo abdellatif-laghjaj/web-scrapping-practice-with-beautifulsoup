@@ -7,4 +7,10 @@ with open(HTML_FILE_PATH, "r") as f:
     soup = BeautifulSoup(f, "html.parser")
 
 #view the contents of the soup object
-print(soup.prettify())
+# print(soup.contents)
+
+#search using the find() method
+print(soup.find('p'))
+
+#search the document using the find method for ID
+print(soup.find(id = 'h1'))
