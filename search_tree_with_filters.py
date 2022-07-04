@@ -16,4 +16,4 @@ print(soup.find('p'))
 print(soup.find(id = 'h1'))
 
 #search using string only
-print(soup.find(id = 'h1').string)
+search_for_string_only = soup.findAll('p', string = 'My first paragraph.')
