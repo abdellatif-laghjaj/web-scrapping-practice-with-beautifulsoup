@@ -1,13 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
+from urllib.request import urlopen
 
-url = 'https://simplilearn.com/'
-result = requests.get(url)
+url = 'https://simplilearn.com/resources/'
+webpage = urlopen(url)
+soup = BeautifulSoup(webpage, 'html.parser')
+webpage.close()
 
-web_page = result.content
 
-soup = BeautifulSoup(web_page, 'html.parser')
-result.close()
+for h2 in soup.find_all('h2'):
+    print(h2.text)
 
-for link in soup.find_all('a'):
-    print(link.get('href'))
+for img in soup.find_all('img'):
+    print(img['src'])
