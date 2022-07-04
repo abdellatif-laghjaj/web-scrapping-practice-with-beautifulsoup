@@ -16,4 +16,9 @@ print(soup.find('p'))
 print(soup.find(id = 'h1'))
 
 #search using string only
-search_for_string_only = soup.findAll('p', string = 'My first paragraph.')
+search_for_string_only = soup.findAll(text = 'Learn More')
+print(search_for_string_only)
+
+#search using css class
+search_for_css_class = soup.findAll('p', class_ = 'link')
+print(search_for_css_class)
