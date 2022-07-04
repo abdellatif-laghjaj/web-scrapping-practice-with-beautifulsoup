@@ -4,10 +4,10 @@ import requests
 url = 'https://simplilearn.com/'
 result = requests.get(url)
 
-page_content = result.content
+web_page = result.content
 
-soup = BeautifulSoup(page_content, 'html.parser')
-soup.contents
+soup = BeautifulSoup(web_page, 'html.parser')
+result.close()
 
-#prettify the html
-print(soup.prettify())
+for link in soup.find_all('a'):
+    print(link.get('href'))
