@@ -36,3 +36,8 @@ tag.insert_after('<p>This is a new tag</p>')
 
 #view the added tag
 print(tag.next_sibling)
+
+
+#clear all modifications
+tag.clear()
+print(tag)
